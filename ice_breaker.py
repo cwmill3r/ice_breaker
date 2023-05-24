@@ -1,13 +1,14 @@
 from langchain import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
-
+from dotenv import load_dotenv
 from agents.linkedin_lookup_agent import lookup as linkedin_lookup_agent
 from third_parties.linkedin import scrape_linkedin_profile
 
 
 if __name__ == "__main__":
     print("Hello LangChain!")
+    load_dotenv()
 
     linkedin_profile_url = linkedin_lookup_agent(name="Eden Marco Udemy")
 
