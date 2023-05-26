@@ -1,9 +1,10 @@
 import os
 from datetime import datetime, timezone
 import logging
-
+from dotenv import load_dotenv
 import tweepy
 
+load_dotenv()
 logger = logging.getLogger("twitter")
 
 auth = tweepy.OAuthHandler(

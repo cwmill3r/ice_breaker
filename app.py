@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 
 from ice_breaker import ice_break
-
+from dotenv import load_dotenv
 app = Flask(__name__)
 
 
@@ -27,4 +27,6 @@ def process():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True)
+    load_dotenv()
+    app.run(host="0.0.0.0", port=5001, debug=True)
+
